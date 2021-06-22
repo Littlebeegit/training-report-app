@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="DELETE">
+        <active>true</active>
+        <activity_stages>{"ends":["3b45e3f61b6c7010dd782134604bcbc1"],"subflows":[],"activities":{"fb45e3f61b6c7010dd782134604bcbc0":"7b4523f21b6c7010dd782134604bcb1b","334523f21b6c7010dd782134604bcb1e":"f34523f21b6c7010dd782134604bcb1b","b74523f21b6c7010dd782134604bcb1c":"734523f21b6c7010dd782134604bcb1b","bf45e3f61b6c7010dd782134604bcbbf":"fb4523f21b6c7010dd782134604bcb1b","3745e3f61b6c7010dd782134604bcbc2":"774523f21b6c7010dd782134604bcb1b"},"stages":{"774523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"774523f21b6c7010dd782134604bcb1b","name":"承認中（承認者１）","value":"approving1"},"f34523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"f34523f21b6c7010dd782134604bcb1b","name":"未申請","value":"not_yet_requested"},"fb4523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"fb4523f21b6c7010dd782134604bcb1b","name":"否認","value":"rejected"},"7b4523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"7b4523f21b6c7010dd782134604bcb1b","name":"承認","value":"approved"},"734523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"734523f21b6c7010dd782134604bcb1b","name":"差戻","value":"returned"}}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition table="x_623889_report_0_report_table">state=requested^EQ<item display_value="提出済み" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="requested"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>334523f21b6c7010dd782134604bcb1e,3745e3f61b6c7010dd782134604bcbc2,fb45e3f61b6c7010dd782134604bcbc0,3b45e3f61b6c7010dd782134604bcbc1</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>334523f21b6c7010dd782134604bcb1e,3745e3f61b6c7010dd782134604bcbc2,fb45e3f61b6c7010dd782134604bcbc0,bf45e3f61b6c7010dd782134604bcbbf,b74523f21b6c7010dd782134604bcb1c,3b45e3f61b6c7010dd782134604bcbc1</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Report WF</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration display_value="2 business days by 4pm">3bf802c20a0a0b52008e2859cd8abcf2</relative_duration>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">334523f21b6c7010dd782134604bcb1e</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>774523f21b6c7010dd782134604bcb19</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 02:23:07</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Report WF">a7804c3c1b603010dd782134604bcbf6</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="DELETE">
+        <access>public</access>
+        <description/>
+        <name>Report WF</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 04:01:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a7804c3c1b603010dd782134604bcbf6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report WF</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>wf_workflow_a7804c3c1b603010dd782134604bcbf6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 04:01:11</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="DELETE">
+        <name>承認</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7b4523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approved</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>承認中（承認者１）</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>774523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approving1</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>承認中（承認者２）</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>ff4523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approving2</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>取消</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7f4523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>cancelled</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>クローズ</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f74523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>closed</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>未申請</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f34523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>not_yet_requested</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>否認</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb4523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>rejected</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_stage action="DELETE">
+        <name>差戻</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>734523f21b6c7010dd782134604bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>returned</value>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_stage>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Approval - User">35433da80a0a029a0028c639a1e51eb4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Approval Activity</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="承認中（承認者１）">774523f21b6c7010dd782134604bcb1b</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>144</x>
+        <y>143</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=3745e3f61b6c7010dd782134604bcbc2"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3345e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+//       answer = [];&#13;
+//       answer.push('id1');&#13;
+//       answer.push('id2');&#13;
+</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3f45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7345e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7345e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7745e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7b45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7f45e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b345e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b745e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bb45e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bb45e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bf45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
+//&#13;
+//    counts.total = total number of users that are part of this approval&#13;
+//    counts.approved = # of users that approved so far&#13;
+//    counts.rejected = # of users that rejected so far&#13;
+//    counts.requested = # of users that are pending approval&#13;
+//    counts.not_requested = # of users that are not pending approval&#13;
+//    counts.not_required = # of users that approval is not required&#13;
+//&#13;
+if (counts.approved &gt; 0) {&#13;
+    answer = 'approved';&#13;
+} else if (counts.rejected &gt; 0) {&#13;
+    answer = 'rejected';&#13;
+} else if (counts.returned &gt; 0) {&#13;
+    answer = 'returned';&#13;
+}</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bf45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>script</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f345e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>${reporter.manager}</value>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f745e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f745e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>ff45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>ff45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bf45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>script</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f745e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bb45e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f745e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7f45e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f345e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>${reporter.manager}</value>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7b45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b745e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7345e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3f45e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b345e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7745e3f61b6c7010dd782134604bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bb45e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7345e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3345e3f61b6c7010dd782134604bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bf45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
+//&#13;
+//    counts.total = total number of users that are part of this approval&#13;
+//    counts.approved = # of users that approved so far&#13;
+//    counts.rejected = # of users that rejected so far&#13;
+//    counts.requested = # of users that are pending approval&#13;
+//    counts.not_requested = # of users that are not pending approval&#13;
+//    counts.not_required = # of users that approval is not required&#13;
+//&#13;
+if (counts.approved &gt; 0) {&#13;
+    answer = 'approved';&#13;
+} else if (counts.rejected &gt; 0) {&#13;
+    answer = 'rejected';&#13;
+} else if (counts.returned &gt; 0) {&#13;
+    answer = 'returned';&#13;
+}</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb45e3f61b6c7010dd782134604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>3745e3f61b6c7010dd782134604bcbc2</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+//       answer = [];&#13;
+//       answer.push('id1');&#13;
+//       answer.push('id2');&#13;
+</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</activity>
+        <condition>activity.result == 'approved' || activity.result == 'skipped' </condition>
+        <condition_default display_value="Approved">586e1fa60a0a0b5c008121ab894f2b06</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Approved</name>
+        <order>1</order>
+        <short_description>Approval request was approved</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b345e3f61b6c7010dd782134604bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="DELETE">
+        <activity display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</activity>
+        <condition>activity.result == 'rejected' </condition>
+        <condition_default display_value="Rejected">586e4ef60a0a0b5c00440b56c014c8a5</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Rejected</name>
+        <order>2</order>
+        <short_description>Approval request was rejected</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3345e3f61b6c7010dd782134604bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="DELETE">
+        <activity display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</activity>
+        <condition>activity.result == 'returned' </condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Returned</name>
+        <order>3</order>
+        <short_description>承認者で差戻す。</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="未申請">f34523f21b6c7010dd782134604bcb1b</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>334523f21b6c7010dd782134604bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>19</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=334523f21b6c7010dd782134604bcb1e"/>
+    <wf_condition action="DELETE">
+        <activity display_value="Begin">334523f21b6c7010dd782134604bcb1e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f74523f21b6c7010dd782134604bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>1380</x>
+        <y>805</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=3b45e3f61b6c7010dd782134604bcbc1"/>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Mark task approved</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="承認">7b4523f21b6c7010dd782134604bcb1b</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>fb45e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>551</x>
+        <y>84</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=fb45e3f61b6c7010dd782134604bcbc0"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>fb45e3f61b6c7010dd782134604bcbc0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7f45e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>fb45e3f61b6c7010dd782134604bcbc0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7f45e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Mark task approved">fb45e3f61b6c7010dd782134604bcbc0</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7345e3f61b6c7010dd782134604bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Mark task rejected</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="否認">fb4523f21b6c7010dd782134604bcb1b</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bf45e3f61b6c7010dd782134604bcbbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>547</x>
+        <y>363</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=bf45e3f61b6c7010dd782134604bcbbf"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>bf45e3f61b6c7010dd782134604bcbbf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3345e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>rejected</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>bf45e3f61b6c7010dd782134604bcbbf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3345e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>rejected</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Mark task rejected">bf45e3f61b6c7010dd782134604bcbbf</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Mark task returned</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="差戻">734523f21b6c7010dd782134604bcb1b</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b74523f21b6c7010dd782134604bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+        <x>365</x>
+        <y>590</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=b74523f21b6c7010dd782134604bcb1c"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>b74523f21b6c7010dd782134604bcb1c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3f4523f21b6c7010dd782134604bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>moot</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>b74523f21b6c7010dd782134604bcb1c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3f4523f21b6c7010dd782134604bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <value>moot</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Mark task returned">b74523f21b6c7010dd782134604bcb1c</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>f74523f21b6c7010dd782134604bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="DELETE">
+        <condition display_value="Rejected">3345e3f61b6c7010dd782134604bcbc7</condition>
+        <from display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3745e3f61b6c7010dd782134604bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="Mark task rejected">bf45e3f61b6c7010dd782134604bcbbf</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">f74523f21b6c7010dd782134604bcb1d</condition>
+        <from display_value="Mark task returned">b74523f21b6c7010dd782134604bcb1c</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3b45e3f61b6c7010dd782134604bcbc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="End">3b45e3f61b6c7010dd782134604bcbc1</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">7345e3f61b6c7010dd782134604bcbc1</condition>
+        <from display_value="Mark task approved">fb45e3f61b6c7010dd782134604bcbc0</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>3f45e3f61b6c7010dd782134604bcbc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="End">3b45e3f61b6c7010dd782134604bcbc1</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">f74523f21b6c7010dd782134604bcb1e</condition>
+        <from display_value="Begin">334523f21b6c7010dd782134604bcb1e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>7b45e3f61b6c7010dd782134604bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Returned">3745e3f61b6c7010dd782134604bcbc7</condition>
+        <from display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b345e3f61b6c7010dd782134604bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="Mark task returned">b74523f21b6c7010dd782134604bcb1c</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Approved">b345e3f61b6c7010dd782134604bcbc7</condition>
+        <from display_value="Approval Activity">3745e3f61b6c7010dd782134604bcbc2</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>b745e3f61b6c7010dd782134604bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="Mark task approved">fb45e3f61b6c7010dd782134604bcbc0</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">3745e3f61b6c7010dd782134604bcbc0</condition>
+        <from display_value="Mark task rejected">bf45e3f61b6c7010dd782134604bcbbf</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>ff45e3f61b6c7010dd782134604bcbc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <to display_value="End">3b45e3f61b6c7010dd782134604bcbc1</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="DELETE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 01:48:28</sys_created_on>
+        <sys_id>bb4523f21b6c7010dd782134604bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 01:48:28</sys_updated_on>
+        <workflow_version display_value="Report WF">774523f21b6c7010dd782134604bcb19</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="DELETE" query="workflow=a7804c3c1b603010dd782134604bcbf6^sys_id!=774523f21b6c7010dd782134604bcb19">
+        <published>false</published>
+    </wf_workflow_version>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>wf_workflow_a7804c3c1b603010dd782134604bcbf6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="wf_workflow_version"&gt;&lt;wf_workflow_version action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;activity_stages&gt;{"ends":["3b45e3f61b6c7010dd782134604bcbc1"],"subflows":[],"activities":{"fb45e3f61b6c7010dd782134604bcbc0":"7b4523f21b6c7010dd782134604bcb1b","334523f21b6c7010dd782134604bcb1e":"f34523f21b6c7010dd782134604bcb1b","b74523f21b6c7010dd782134604bcb1c":"734523f21b6c7010dd782134604bcb1b","bf45e3f61b6c7010dd782134604bcbbf":"fb4523f21b6c7010dd782134604bcb1b","3745e3f61b6c7010dd782134604bcbc2":"774523f21b6c7010dd782134604bcb1b"},"stages":{"774523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"774523f21b6c7010dd782134604bcb1b","name":"承認中（承認者１）","value":"approving1"},"f34523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"f34523f21b6c7010dd782134604bcb1b","name":"未申請","value":"not_yet_requested"},"fb4523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"fb4523f21b6c7010dd782134604bcb1b","name":"否認","value":"rejected"},"7b4523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"7b4523f21b6c7010dd782134604bcb1b","name":"承認","value":"approved"},"734523f21b6c7010dd782134604bcb1b":{"order":100,"duration":"","stageId":"734523f21b6c7010dd782134604bcb1b","name":"差戻","value":"returned"}}}&lt;/activity_stages&gt;&lt;after_business_rules&gt;false&lt;/after_business_rules&gt;&lt;checked_out/&gt;&lt;checked_out_by/&gt;&lt;column_renderer display_value="Workflow-driven"&gt;a56213111b030100adca1e094f0713ac&lt;/column_renderer&gt;&lt;condition table="x_623889_report_0_report_table"&gt;state=requested^EQ&lt;item display_value="提出済み" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="requested"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;condition_type&gt;run_match&lt;/condition_type&gt;&lt;description/&gt;&lt;expected_sequences&gt;334523f21b6c7010dd782134604bcb1e,3745e3f61b6c7010dd782134604bcbc2,fb45e3f61b6c7010dd782134604bcbc0,3b45e3f61b6c7010dd782134604bcbc1&lt;/expected_sequences&gt;&lt;expected_time&gt;1970-01-01 14:00:00&lt;/expected_time&gt;&lt;expected_time_type/&gt;&lt;full_sequences&gt;334523f21b6c7010dd782134604bcb1e,3745e3f61b6c7010dd782134604bcbc2,fb45e3f61b6c7010dd782134604bcbc0,bf45e3f61b6c7010dd782134604bcbbf,b74523f21b6c7010dd782134604bcb1c,3b45e3f61b6c7010dd782134604bcbc1&lt;/full_sequences&gt;&lt;journal/&gt;&lt;max_activity_count&gt;100&lt;/max_activity_count&gt;&lt;name&gt;Report WF&lt;/name&gt;&lt;not_cacheable&gt;false&lt;/not_cacheable&gt;&lt;on_cancel&gt;&lt;![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]&gt;&lt;/on_cancel&gt;&lt;order&gt;100&lt;/order&gt;&lt;pin_type&gt;set_by_activity&lt;/pin_type&gt;&lt;published&gt;true&lt;/published&gt;&lt;relative_duration display_value="2 business days by 4pm"&gt;3bf802c20a0a0b52008e2859cd8abcf2&lt;/relative_duration&gt;&lt;requires_ert&gt;true&lt;/requires_ert&gt;&lt;run_multiple&gt;false&lt;/run_multiple&gt;&lt;schedule/&gt;&lt;stage_field&gt;stage&lt;/stage_field&gt;&lt;stage_order&gt;computed&lt;/stage_order&gt;&lt;start display_value="Begin"&gt;334523f21b6c7010dd782134604bcb1e&lt;/start&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;774523f21b6c7010dd782134604bcb19&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 02:23:07&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_table&lt;/table&gt;&lt;timezone/&gt;&lt;validated&gt;false&lt;/validated&gt;&lt;workflow display_value="Report WF"&gt;a7804c3c1b603010dd782134604bcbf6&lt;/workflow&gt;&lt;/wf_workflow_version&gt;&lt;wf_workflow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;description/&gt;&lt;name&gt;Report WF&lt;/name&gt;&lt;preview/&gt;&lt;sys_class_name&gt;wf_workflow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-02 04:01:11&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a7804c3c1b603010dd782134604bcbf6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Report WF&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;wf_workflow_a7804c3c1b603010dd782134604bcbf6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-02 04:01:11&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_table&lt;/table&gt;&lt;template&gt;false&lt;/template&gt;&lt;vars/&gt;&lt;/wf_workflow&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;承認&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7b4523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approved&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;承認中（承認者１）&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;774523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approving1&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;承認中（承認者２）&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;ff4523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approving2&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;取消&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7f4523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;cancelled&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;クローズ&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f74523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;closed&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;未申請&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f34523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;not_yet_requested&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;否認&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb4523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;rejected&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_stage action="INSERT_OR_UPDATE"&gt;&lt;name&gt;差戻&lt;/name&gt;&lt;ola&gt;1970-01-01 00:00:00&lt;/ola&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;734523f21b6c7010dd782134604bcb1b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;returned&lt;/value&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_stage&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Approval - User"&gt;35433da80a0a029a0028c639a1e51eb4&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;3&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Approval Activity&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage display_value="承認中（承認者１）"&gt;774523f21b6c7010dd782134604bcb1b&lt;/stage&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;144&lt;/x&gt;&lt;y&gt;143&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3745e3f61b6c7010dd782134604bcbc2"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1360&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3345e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set 'answer' to the number of seconds this timer should wait&amp;#13;
+answer = 0;&lt;/value&gt;&lt;variable display_value="Due date script"&gt;a782cde9c0a8006608f39abdd85c8395&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1330&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Groups"&gt;02c618170a0a0b26436f5c2c9f7a3901&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;2050&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&amp;#13;
+//&amp;#13;
+// For example:&amp;#13;
+//       answer = [];&amp;#13;
+//       answer.push('id1');&amp;#13;
+//       answer.push('id2');&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Additional approvers script"&gt;c35e582f0a0a0ba96248a70985207e63&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;110&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule based on"&gt;a77191a4c0a800662b403f7dff5f1bbd&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule"&gt;a7754e91c0a800664938d0ef6d2664d7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1110&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3f45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Duration"&gt;a769a182c0a8006629db7fa3fc2a863d&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7345e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone"&gt;a775f59ac0a8006665d72362ae687035&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7345e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule field"&gt;a774138dc0a80066000be7af20961c7d&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1150&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7745e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Due date field"&gt;a76b8c6ec0a800664bb14d5d8b9cd7c4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;310&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7b45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;reject&lt;/value&gt;&lt;variable display_value="When anyone rejects"&gt;502163410a6a803f0356332b24dc7945&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;120&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7f45e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone based on"&gt;a77903a7c0a8006641af7c9b1d34444e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1120&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b345e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;3bf802c20a0a0b52008e2859cd8abcf2&lt;/value&gt;&lt;variable display_value="Relative duration"&gt;a76c6257c0a8006645cff43883470e64&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;330&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b745e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approval_history&lt;/value&gt;&lt;variable display_value="Approval Journal Column"&gt;e863e3b80a0004f911d67787e77e0f16&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;103&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bb45e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Document ID"&gt;e37b77ac0a0004f973283ad13b341c5b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bb45e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone field"&gt;a7781cb6c0a80066147dc7a5244d5d16&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1370&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bf45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&amp;#13;
+//&amp;#13;
+//    counts.total = total number of users that are part of this approval&amp;#13;
+//    counts.approved = # of users that approved so far&amp;#13;
+//    counts.rejected = # of users that rejected so far&amp;#13;
+//    counts.requested = # of users that are pending approval&amp;#13;
+//    counts.not_requested = # of users that are not pending approval&amp;#13;
+//    counts.not_required = # of users that approval is not required&amp;#13;
+//&amp;#13;
+if (counts.approved &amp;gt; 0) {&amp;#13;
+    answer = 'approved';&amp;#13;
+} else if (counts.rejected &amp;gt; 0) {&amp;#13;
+    answer = 'rejected';&amp;#13;
+} else if (counts.returned &amp;gt; 0) {&amp;#13;
+    answer = 'returned';&amp;#13;
+}&lt;/value&gt;&lt;variable display_value="Approval Script"&gt;02c86d780a0a0b261e6a356bc893d348&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bf45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;script&lt;/value&gt;&lt;variable display_value="Wait for"&gt;c35e5bdd0a0a0ba96248a709f495c9ae&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f345e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;${reporter.manager}&lt;/value&gt;&lt;variable display_value="Users"&gt;c35e4cc40a0a0ba96248a7098ec9cb06&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;101&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f745e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approval&lt;/value&gt;&lt;variable display_value="Approval Column"&gt;e846198f0a0004f91fba434a514ba8b8&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;115&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f745e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Due date based on"&gt;a76680b9c0a8006661b107d0f21fae67&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;2000&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Advanced"&gt;02ca01820a0a0b261cf923fb95f5e1d0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;104&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Document Table"&gt;e37a96e80a0004f978b47d2d6c5e0b22&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;50&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;ff45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Condition"&gt;4485eef70a6a803f6bc4bafa9e999640&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;50&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;ff45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Condition"&gt;4485eef70a6a803f6bc4bafa9e999640&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bf45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;script&lt;/value&gt;&lt;variable display_value="Wait for"&gt;c35e5bdd0a0a0ba96248a709f495c9ae&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;101&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f745e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approval&lt;/value&gt;&lt;variable display_value="Approval Column"&gt;e846198f0a0004f91fba434a514ba8b8&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;103&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bb45e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Document ID"&gt;e37b77ac0a0004f973283ad13b341c5b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;104&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Document Table"&gt;e37a96e80a0004f978b47d2d6c5e0b22&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;110&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule based on"&gt;a77191a4c0a800662b403f7dff5f1bbd&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;115&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f745e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Due date based on"&gt;a76680b9c0a8006661b107d0f21fae67&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;120&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7f45e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone based on"&gt;a77903a7c0a8006641af7c9b1d34444e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f345e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;${reporter.manager}&lt;/value&gt;&lt;variable display_value="Users"&gt;c35e4cc40a0a0ba96248a7098ec9cb06&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;310&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7b45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;reject&lt;/value&gt;&lt;variable display_value="When anyone rejects"&gt;502163410a6a803f0356332b24dc7945&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;330&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b745e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approval_history&lt;/value&gt;&lt;variable display_value="Approval Journal Column"&gt;e863e3b80a0004f911d67787e77e0f16&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule"&gt;a7754e91c0a800664938d0ef6d2664d7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7345e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Schedule field"&gt;a774138dc0a80066000be7af20961c7d&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1110&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3f45e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Duration"&gt;a769a182c0a8006629db7fa3fc2a863d&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1120&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b345e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;3bf802c20a0a0b52008e2859cd8abcf2&lt;/value&gt;&lt;variable display_value="Relative duration"&gt;a76c6257c0a8006645cff43883470e64&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1150&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7745e3f61b6c7010dd782134604bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Due date field"&gt;a76b8c6ec0a800664bb14d5d8b9cd7c4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bb45e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone field"&gt;a7781cb6c0a80066147dc7a5244d5d16&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7345e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Time zone"&gt;a775f59ac0a8006665d72362ae687035&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1330&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Groups"&gt;02c618170a0a0b26436f5c2c9f7a3901&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1360&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3345e3f61b6c7010dd782134604bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set 'answer' to the number of seconds this timer should wait&amp;#13;
+answer = 0;&lt;/value&gt;&lt;variable display_value="Due date script"&gt;a782cde9c0a8006608f39abdd85c8395&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;1370&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bf45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&amp;#13;
+//&amp;#13;
+//    counts.total = total number of users that are part of this approval&amp;#13;
+//    counts.approved = # of users that approved so far&amp;#13;
+//    counts.rejected = # of users that rejected so far&amp;#13;
+//    counts.requested = # of users that are pending approval&amp;#13;
+//    counts.not_requested = # of users that are not pending approval&amp;#13;
+//    counts.not_required = # of users that approval is not required&amp;#13;
+//&amp;#13;
+if (counts.approved &amp;gt; 0) {&amp;#13;
+    answer = 'approved';&amp;#13;
+} else if (counts.rejected &amp;gt; 0) {&amp;#13;
+    answer = 'rejected';&amp;#13;
+} else if (counts.returned &amp;gt; 0) {&amp;#13;
+    answer = 'returned';&amp;#13;
+}&lt;/value&gt;&lt;variable display_value="Approval Script"&gt;02c86d780a0a0b261e6a356bc893d348&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;2000&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb45e3f61b6c7010dd782134604bcbc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Advanced"&gt;02ca01820a0a0b261cf923fb95f5e1d0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/document_key&gt;&lt;order&gt;2050&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&amp;#13;
+//&amp;#13;
+// For example:&amp;#13;
+//       answer = [];&amp;#13;
+//       answer.push('id1');&amp;#13;
+//       answer.push('id2');&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Additional approvers script"&gt;c35e582f0a0a0ba96248a70985207e63&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/activity&gt;&lt;condition&gt;activity.result == 'approved' || activity.result == 'skipped' &lt;/condition&gt;&lt;condition_default display_value="Approved"&gt;586e1fa60a0a0b5c008121ab894f2b06&lt;/condition_default&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Approved&lt;/name&gt;&lt;order&gt;1&lt;/order&gt;&lt;short_description&gt;Approval request was approved&lt;/short_description&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b345e3f61b6c7010dd782134604bcbc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/activity&gt;&lt;condition&gt;activity.result == 'rejected' &lt;/condition&gt;&lt;condition_default display_value="Rejected"&gt;586e4ef60a0a0b5c00440b56c014c8a5&lt;/condition_default&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;false&lt;/is_positive&gt;&lt;name&gt;Rejected&lt;/name&gt;&lt;order&gt;2&lt;/order&gt;&lt;short_description&gt;Approval request was rejected&lt;/short_description&gt;&lt;skip_during_generate&gt;true&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3345e3f61b6c7010dd782134604bcbc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/activity&gt;&lt;condition&gt;activity.result == 'returned' &lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;false&lt;/is_positive&gt;&lt;name&gt;Returned&lt;/name&gt;&lt;order&gt;3&lt;/order&gt;&lt;short_description&gt;承認者で差戻す。&lt;/short_description&gt;&lt;skip_during_generate&gt;true&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Begin"&gt;c7a5e32c0a0a0b3a002377c24ed8ea76&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;1&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Begin&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage display_value="未申請"&gt;f34523f21b6c7010dd782134604bcb1b&lt;/stage&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;334523f21b6c7010dd782134604bcb1e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width&gt;80&lt;/width&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;19&lt;/x&gt;&lt;y&gt;20&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=334523f21b6c7010dd782134604bcb1e"/&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Begin"&gt;334523f21b6c7010dd782134604bcb1e&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f74523f21b6c7010dd782134604bcb1e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="End"&gt;c7a66f7d0a0a0b3a004544a6d2f14076&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;2&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input/&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;End&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width&gt;80&lt;/width&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;1380&lt;/x&gt;&lt;y&gt;805&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3b45e3f61b6c7010dd782134604bcbc1"/&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Approval Action"&gt;50a78fa50a6a803f66d064255f7201a5&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;4&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Mark task approved&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage display_value="承認"&gt;7b4523f21b6c7010dd782134604bcb1b&lt;/stage&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;551&lt;/x&gt;&lt;y&gt;84&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=fb45e3f61b6c7010dd782134604bcbc0"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7f45e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approved&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7f45e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;approved&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Mark task approved"&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7345e3f61b6c7010dd782134604bcbc1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Approval Action"&gt;50a78fa50a6a803f66d064255f7201a5&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;5&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Mark task rejected&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage display_value="否認"&gt;fb4523f21b6c7010dd782134604bcb1b&lt;/stage&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;547&lt;/x&gt;&lt;y&gt;363&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=bf45e3f61b6c7010dd782134604bcbbf"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3345e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;rejected&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3345e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;rejected&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Mark task rejected"&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Approval Action"&gt;50a78fa50a6a803f66d064255f7201a5&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;6&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Mark task returned&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage display_value="差戻"&gt;734523f21b6c7010dd782134604bcb1b&lt;/stage&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b74523f21b6c7010dd782134604bcb1c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;x&gt;365&lt;/x&gt;&lt;y&gt;590&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=b74523f21b6c7010dd782134604bcb1c"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;b74523f21b6c7010dd782134604bcb1c&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3f4523f21b6c7010dd782134604bcb1c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;moot&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;b74523f21b6c7010dd782134604bcb1c&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3f4523f21b6c7010dd782134604bcb1c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;value&gt;moot&lt;/value&gt;&lt;variable display_value="Action"&gt;50ab35f70a6a803f76d36e1ebaf3639e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Mark task returned"&gt;b74523f21b6c7010dd782134604bcb1c&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f74523f21b6c7010dd782134604bcb1d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Rejected"&gt;3345e3f61b6c7010dd782134604bcbc7&lt;/condition&gt;&lt;from display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3745e3f61b6c7010dd782134604bcbc9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="Mark task rejected"&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;f74523f21b6c7010dd782134604bcb1d&lt;/condition&gt;&lt;from display_value="Mark task returned"&gt;b74523f21b6c7010dd782134604bcb1c&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3b45e3f61b6c7010dd782134604bcbc8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="End"&gt;3b45e3f61b6c7010dd782134604bcbc1&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;7345e3f61b6c7010dd782134604bcbc1&lt;/condition&gt;&lt;from display_value="Mark task approved"&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;3f45e3f61b6c7010dd782134604bcbc8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="End"&gt;3b45e3f61b6c7010dd782134604bcbc1&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;f74523f21b6c7010dd782134604bcb1e&lt;/condition&gt;&lt;from display_value="Begin"&gt;334523f21b6c7010dd782134604bcb1e&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;7b45e3f61b6c7010dd782134604bcbc9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Returned"&gt;3745e3f61b6c7010dd782134604bcbc7&lt;/condition&gt;&lt;from display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b345e3f61b6c7010dd782134604bcbc9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="Mark task returned"&gt;b74523f21b6c7010dd782134604bcb1c&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Approved"&gt;b345e3f61b6c7010dd782134604bcbc7&lt;/condition&gt;&lt;from display_value="Approval Activity"&gt;3745e3f61b6c7010dd782134604bcbc2&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b745e3f61b6c7010dd782134604bcbc9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="Mark task approved"&gt;fb45e3f61b6c7010dd782134604bcbc0&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;3745e3f61b6c7010dd782134604bcbc0&lt;/condition&gt;&lt;from display_value="Mark task rejected"&gt;bf45e3f61b6c7010dd782134604bcbbf&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;ff45e3f61b6c7010dd782134604bcbc8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;to display_value="End"&gt;3b45e3f61b6c7010dd782134604bcbc1&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_estimated_runtime_config action="INSERT_OR_UPDATE"&gt;&lt;estimated_run_time/&gt;&lt;no_of_data_points&gt;1&lt;/no_of_data_points&gt;&lt;percentage_threshold_ert&gt;20&lt;/percentage_threshold_ert&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 01:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;bb4523f21b6c7010dd782134604bcb19&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 01:48:28&lt;/sys_updated_on&gt;&lt;workflow_version display_value="Report WF"&gt;774523f21b6c7010dd782134604bcb19&lt;/workflow_version&gt;&lt;/wf_estimated_runtime_config&gt;&lt;wf_workflow_version action="update_multiple" query="workflow=a7804c3c1b603010dd782134604bcbf6^sys_id!=774523f21b6c7010dd782134604bcb19"&gt;&lt;published&gt;false&lt;/published&gt;&lt;/wf_workflow_version&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1098054619</payload_hash>
+        <record_name>Report WF</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 02:23:07</sys_created_on>
+        <sys_id>233dab7e1b6c7010dd782134604bcb5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179ee949eb80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 02:23:07</sys_updated_on>
+        <type>Workflow</type>
+        <update_guid>6b3dab7e506c70107dbc214a0aa87a5d</update_guid>
+        <update_guid_history>6b3dab7e506c70107dbc214a0aa87a5d:-1098054619,83b1083eb0e07010aef7b125a03ebd0f:-516046319,4467ff269be07010223bca2957d91fee:-287708543,4447932e9f607010b0b4f7317e390078:767291714,99706aa6abec301049b007c497069eee:1203836474,48db1ea252ec3010abad5060b42c51ed:-1313682943,4f9116ea3dac3010a67df30a73823283:-1655843198,161b3a5a45643010a209a1adf8e86a52:-1832246289,a0063656ae64301031c03de83c6484b3:1273860027,f8943ed2b5643010068aa09d765f9c75:37419456,b740b6121a643010969f7f5478336194:-887528088,de692e9ad524301037095517ef9d3275:-1587475868</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Report WF">6f90f7321bac7010dd782134604bcba8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 02:37:53</sys_created_on>
+        <sys_db_object display_value="" name="wf_workflow">wf_workflow</sys_db_object>
+        <sys_id>0b2aef524eb04ae6928fa560bcc6bf04</sys_id>
+        <sys_metadata>a7804c3c1b603010dd782134604bcbf6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report WF</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>wf_workflow_a7804c3c1b603010dd782134604bcbf6</sys_update_name>
+        <sys_update_version display_value="wf_workflow_a7804c3c1b603010dd782134604bcbf6">233dab7e1b6c7010dd782134604bcb5e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 02:37:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

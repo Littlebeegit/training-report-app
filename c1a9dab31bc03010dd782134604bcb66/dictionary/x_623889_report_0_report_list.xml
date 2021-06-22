@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="レポートリスト" max_length="40" name="x_623889_report_0_report_list" sizeclass="2" type="collection">
+        <element label="Report ID" max_length="40" name="report_id" type="string"/>
+        <element label="Report Name" max_length="40" name="report_name" type="string"/>
+    </element>
+</database>

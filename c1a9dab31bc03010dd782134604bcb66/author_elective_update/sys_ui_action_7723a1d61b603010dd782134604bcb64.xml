@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>return_report</action_name>
+        <active>false</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>差戻</name>
+        <onclick>returnReport()</onclick>
+        <order>300</order>
+        <script><![CDATA[function returnReport() {
+    var d = new GlideModalForm('差戻先の選択', 'x_623889_report_0_report_table', modalCallBackFunction);
+    d.setSysID('ed7b75711b987410dd782134604bcb87');
+    d.render();
+
+    function modalCallBackFunction(btn, sysId, table, displayValue) {
+        alert('callback');
+        alert(btn + ' ' + sysId + ' ' + table + ' ' + displayValue);
+        // changeStateToReturn();
+    }
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 03:07:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7723a1d61b603010dd782134604bcb64</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>差戻</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_ui_action_7723a1d61b603010dd782134604bcb64</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-08 02:07:25</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>sys_ui_action_7723a1d61b603010dd782134604bcb64</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;return_report&lt;/action_name&gt;&lt;active&gt;false&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;差戻&lt;/name&gt;&lt;onclick&gt;returnReport()&lt;/onclick&gt;&lt;order&gt;300&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function returnReport() {
+    var d = new GlideModalForm('差戻先の選択', 'x_623889_report_0_report_table', modalCallBackFunction);
+    d.setSysID('ed7b75711b987410dd782134604bcb87');
+    d.render();
+
+    function modalCallBackFunction(btn, sysId, table, displayValue) {
+        alert('callback');
+        alert(btn + ' ' + sysId + ' ' + table + ' ' + displayValue);
+        // changeStateToReturn();
+    }
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-07 03:07:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7723a1d61b603010dd782134604bcb64&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;差戻&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_7723a1d61b603010dd782134604bcb64&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-08 02:07:25&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_table&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1083547050</payload_hash>
+        <record_name>差戻</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-08 02:07:25</sys_created_on>
+        <sys_id>ff0062a61bec3010dd782134604bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179e95fe2e00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-08 02:07:25</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>7b0062a6e0ec301078ddfe4c97ba1f1f</update_guid>
+        <update_guid_history>7b0062a6e0ec301078ddfe4c97ba1f1f:1083547050,95bae19a2c6030106ac141a34fb5e178:-651005136,7b8ae95e11603010e300689fcffc925f:1170731238,b4a5e59a1a60301049e37c1fef083921:2102694683,b765ad5a136030107580f6a34a272dee:-1122351568,df15255a1a603010f7fba44b4d5a639a:-1571517138,0c242dd669603010a0c07a8f29b85b0e:985160526</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 08:43:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>25a6f5b56a764c00894f43655f3a7640</sys_id>
+        <sys_metadata>7723a1d61b603010dd782134604bcb64</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>差戻</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent display_value="Report Table">04c95eb31bc03010dd782134604bcb7c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>sys_ui_action_7723a1d61b603010dd782134604bcb64</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_7723a1d61b603010dd782134604bcb64">ff0062a61bec3010dd782134604bcb1f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-11 08:43:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

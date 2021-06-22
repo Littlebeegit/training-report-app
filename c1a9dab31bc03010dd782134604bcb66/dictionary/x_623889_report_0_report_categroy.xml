@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Report Categroy" max_length="40" name="x_623889_report_0_report_categroy" sizeclass="10" type="collection">
+        <element label="Categroy id" max_length="40" name="categroy_id" type="string"/>
+        <element display="true" label="Categroy name" max_length="40" name="categroy_name" type="string"/>
+        <element label="Parent categroy id" max_length="40" name="parent_categroy_id" type="string"/>
+    </element>
+</database>

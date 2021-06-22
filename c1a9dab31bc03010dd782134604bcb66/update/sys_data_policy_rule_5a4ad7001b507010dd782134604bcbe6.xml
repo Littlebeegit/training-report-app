@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>report_format</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-19 01:41:37</sys_created_on>
+        <sys_data_policy display_value="Type Name 3 required">a91a57001b507010dd782134604bcb6b</sys_data_policy>
+        <sys_id>5a4ad7001b507010dd782134604bcbe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>report_format</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_data_policy_rule_5a4ad7001b507010dd782134604bcbe6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-19 01:41:37</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+    </sys_data_policy_rule>
+</record_update>

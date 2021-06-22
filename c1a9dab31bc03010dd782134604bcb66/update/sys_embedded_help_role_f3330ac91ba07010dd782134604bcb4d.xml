@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_623889_report_0.task1_user" name="x_623889_report_0.task1_user">6b330ac91ba07010dd782134604bcb49</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-03 08:10:39</sys_created_on>
+        <sys_id>f3330ac91ba07010dd782134604bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6b330ac91ba07010dd782134604bcb49</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_embedded_help_role_f3330ac91ba07010dd782134604bcb4d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-03 08:10:39</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

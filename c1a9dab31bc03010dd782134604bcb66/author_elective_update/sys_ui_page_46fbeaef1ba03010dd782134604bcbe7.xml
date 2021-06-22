@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[function onOK() {
+	gsftSubmit(null, g_form.getFormElement(), 'show_return_to_action');
+}
+
+function onCancel() {
+	closeGlideModal();
+}
+
+function closeGlideModal() { 
+	try {
+		GlideModal.get().destroy();
+	}
+	catch(err){
+      var x = document.getElementById('global.select_return_to_dialog');
+      if (x) {
+			x.click();
+		} 
+	}
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_623889_report_0_select_return_to_dialog.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<j:set var="jvar_msg_intro" value="${sysparm_intro}"/>
+	<g:ui_form>
+		<div class="modal-body">
+			<strong>return_to_user:</strong>${jvar_msg_intro}<br></br>
+		</div>
+		<footer class="modal-footer flex">
+			<g:dialog_buttons_ok_cancel ok="return onOK();" cancel="return onCancel();" ok_type="button" cancel_type="button"/>
+		</footer>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>select_return_to_dialog</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 05:37:44</sys_created_on>
+        <sys_id>46fbeaef1ba03010dd782134604bcbe7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>select_return_to_dialog</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_ui_page_46fbeaef1ba03010dd782134604bcbe7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-11 06:14:02</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>sys_ui_page_46fbeaef1ba03010dd782134604bcbe7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function onOK() {
+	gsftSubmit(null, g_form.getFormElement(), 'show_return_to_action');
+}
+
+function onCancel() {
+	closeGlideModal();
+}
+
+function closeGlideModal() { 
+	try {
+		GlideModal.get().destroy();
+	}
+	catch(err){
+      var x = document.getElementById('global.select_return_to_dialog');
+      if (x) {
+			x.click();
+		} 
+	}
+}]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_623889_report_0_select_return_to_dialog.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;j:set var="jvar_msg_intro" value="${sysparm_intro}"/&gt;
+	&lt;g:ui_form&gt;
+		&lt;div class="modal-body"&gt;
+			&lt;strong&gt;return_to_user:&lt;/strong&gt;${jvar_msg_intro}&lt;br&gt;&lt;/br&gt;
+		&lt;/div&gt;
+		&lt;footer class="modal-footer flex"&gt;
+			&lt;g:dialog_buttons_ok_cancel ok="return onOK();" cancel="return onCancel();" ok_type="button" cancel_type="button"/&gt;
+		&lt;/footer&gt;
+	&lt;/g:ui_form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;select_return_to_dialog&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-11 05:37:44&lt;/sys_created_on&gt;&lt;sys_id&gt;46fbeaef1ba03010dd782134604bcbe7&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;select_return_to_dialog&lt;/sys_name&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_46fbeaef1ba03010dd782134604bcbe7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-11 06:14:02&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>707990880</payload_hash>
+        <record_name>select_return_to_dialog</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 06:14:02</sys_created_on>
+        <sys_id>99453ea71be03010dd782134604bcbbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179f9b4bf6a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-11 06:14:02</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>15453ea788e030100b757aba4b9485bb</update_guid>
+        <update_guid_history>15453ea788e030100b757aba4b9485bb:707990880,d363fae3d1e03010026c05f0c4475dac:-217815991,4d01bae359e030109a179245cfa9d22e:1705544313,cc20f2a361e03010e06e9b6a0f7d4c76:1708808990,308eaa23c9e03010249e40d79d3d9159:-2119986412,b9fc2aafdea030104207c40852889d8a:1723028278</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 06:24:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>837399757b7b42a487a15b50b05c5419</sys_id>
+        <sys_metadata>46fbeaef1ba03010dd782134604bcbe7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>select_return_to_dialog</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_46fbeaef1ba03010dd782134604bcbe7</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_46fbeaef1ba03010dd782134604bcbe7">99453ea71be03010dd782134604bcbbb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-11 06:24:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

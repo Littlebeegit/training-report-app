@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Temperature Report" max_length="40" name="x_623889_report_0_temperature_report" sizeclass="1" type="collection">
+        <element default="0000" label="レポートID" max_length="40" name="report_id" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="申請者" max_length="32" name="requester" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element choice="3" default="新規" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="新規" sequence="10" value="not_yet_requested"/>
+                <element inactive_on_update="false" label="承認待ち" sequence="20" value="requested"/>
+                <element inactive_on_update="false" label="承認" sequence="30" value="approved"/>
+                <element inactive_on_update="false" label="否認" sequence="40" value="rejected"/>
+                <element inactive_on_update="false" label="差戻" sequence="50" value="returned"/>
+            </choice>
+        </element>
+        <element default="36.2" label="体温" max_length="20" name="temperature" type="decimal"/>
+        <index name="index">
+            <element name="requester"/>
+        </index>
+    </element>
+</database>

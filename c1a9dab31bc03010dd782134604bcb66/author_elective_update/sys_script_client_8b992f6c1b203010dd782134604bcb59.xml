@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Hide Submit Button</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+    var v = g_document.getElement('sysverb_insert_bottom').value;
+    //document.getElementById("sysverb_insert_bottom").style.display = 'none';
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 02:26:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b992f6c1b203010dd782134604bcb59</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Hide Submit Button</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_script_client_8b992f6c1b203010dd782134604bcb59</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 02:33:10</sys_updated_on>
+        <table>x_623889_report_0_report_list</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>sys_script_client_8b992f6c1b203010dd782134604bcb59</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;sys_created_on&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Hide Submit Button&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    //Type appropriate comment here, and begin script below
+    var v = g_document.getElement('sysverb_insert_bottom').value;
+    //document.getElementById("sysverb_insert_bottom").style.display = 'none';
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-02 02:26:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8b992f6c1b203010dd782134604bcb59&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Hide Submit Button&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_8b992f6c1b203010dd782134604bcb59&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-02 02:33:10&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_list&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1857467264</payload_hash>
+        <record_name>Hide Submit Button</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 02:33:10</sys_created_on>
+        <sys_id>d26c6fec1b203010dd782134604bcb15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179ca914bb00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 02:33:10</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>5e6c6fec2820301071c7e857ea749a14</update_guid>
+        <update_guid_history>5e6c6fec2820301071c7e857ea749a14:-1857467264,378b6fac3b203010754da8626d625937:116531336,0dfa2f6cd4203010cf06c6cb31393480:999168948</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 02:42:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>4009f65b947c42489940bb82fd45d564</sys_id>
+        <sys_metadata>8b992f6c1b203010dd782134604bcb59</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hide Submit Button</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent display_value="レポートリスト">a15ef50c1ba03010dd782134604bcbc4</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>sys_script_client_8b992f6c1b203010dd782134604bcb59</sys_update_name>
+        <sys_update_version display_value="sys_script_client_8b992f6c1b203010dd782134604bcb59">d26c6fec1b203010dd782134604bcb15</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 02:42:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
