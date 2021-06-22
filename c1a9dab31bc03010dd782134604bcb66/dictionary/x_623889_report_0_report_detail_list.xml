@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="レポート明細リスト" max_length="40" name="x_623889_report_0_report_detail_list" sizeclass="2" type="collection">
+        <element label="明細列A" max_length="40" name="detail_column_a" type="string"/>
+        <element label="明細列B" max_length="40" name="detail_column_b" type="string"/>
+        <element label="明細列C" max_length="40" name="detail_column_c" type="string"/>
+        <element label="明細列D" max_length="40" name="detail_column_d" type="string"/>
+        <element label="Report List Sys Id" max_length="32" name="report_list_sys_id" reference="x_623889_report_0_report_list" type="reference"/>
+        <index name="index">
+            <element name="report_list_sys_id"/>
+        </index>
+    </element>
+</database>

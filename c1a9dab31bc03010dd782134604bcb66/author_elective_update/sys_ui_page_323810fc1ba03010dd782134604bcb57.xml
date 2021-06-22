@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_623889_report_0_flow_dialog.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<tr>
+	Hello!
+</tr>
+</j:jelly>]]></html>
+        <name>flow_dialog</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 05:46:21</sys_created_on>
+        <sys_id>323810fc1ba03010dd782134604bcb57</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>flow_dialog</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_ui_page_323810fc1ba03010dd782134604bcb57</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 05:57:51</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>sys_ui_page_323810fc1ba03010dd782134604bcb57</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;true&lt;/direct&gt;&lt;endpoint&gt;x_623889_report_0_flow_dialog.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+&lt;tr&gt;
+	Hello!
+&lt;/tr&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;flow_dialog&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-02 05:46:21&lt;/sys_created_on&gt;&lt;sys_id&gt;323810fc1ba03010dd782134604bcb57&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;flow_dialog&lt;/sys_name&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_323810fc1ba03010dd782134604bcb57&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-02 05:57:51&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-476242251</payload_hash>
+        <record_name>flow_dialog</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 05:57:51</sys_created_on>
+        <sys_id>a84b98301be03010dd782134604bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179cb4cb1db0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-02 05:57:51</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>244b9830c0e03010e9d6993d0325cc4d</update_guid>
+        <update_guid_history>244b9830c0e03010e9d6993d0325cc4d:-476242251,c7d8d4bcd6a03010317ccb2279830e9a:171620476,cca8dc7c53a03010cede0c4f15dd65e0:328189159</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 06:24:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>840181d533bf4ac88bda16e0d023b890</sys_id>
+        <sys_metadata>323810fc1ba03010dd782134604bcb57</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flow_dialog</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_323810fc1ba03010dd782134604bcb57</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_323810fc1ba03010dd782134604bcb57">a84b98301be03010dd782134604bcb4d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-11 06:24:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

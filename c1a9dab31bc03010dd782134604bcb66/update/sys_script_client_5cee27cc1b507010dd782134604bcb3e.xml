@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>The Description of Change Options Value - Report Table.</description>
+        <field>report_category</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages>The message of Change Options Value - Report Table.</messages>
+        <name>Change Options Value - Report Table</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+    if (g_form.getValue('report_category') == 0) {
+        g_form.clearOptions('report_subcategory');
+        g_form.addOption('report_subcategory', 0, '-- 選択してください --');
+        return;
+    }
+
+    var selectedValue = g_form.getValue('report_subcategory');
+
+    var getSubCategroy = new GlideAjax('GetSubCategroy');
+    getSubCategroy.addParam('sysparm_name', 'getList');
+    getSubCategroy.addParam('sysparm_categroyId', newValue);
+    getSubCategroy.getXML(callBackFunction);
+
+    function callBackFunction(response) {
+        var re = response.responseXML.documentElement.getAttribute("answer");
+        var options = JSON.parse(re);
+        g_form.clearOptions('report_subcategory');
+        g_form.addOption('report_subcategory', 0, '-- 選択してください --');
+        var isExist = false;
+        for (var i = 0; i < options.length; i++) {
+            g_form.addOption('report_subcategory', options[i].categroy_id, options[i].categroy_name);
+            if (options[i].categroy_id == selectedValue) {
+                isExist = true;
+            }
+        }
+        if (isExist) {
+            g_form.setValue('report_subcategory', selectedValue);
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-19 03:13:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5cee27cc1b507010dd782134604bcb3e</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>Change Options Value - Report Table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_script_client_5cee27cc1b507010dd782134604bcb3e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-21 01:54:32</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

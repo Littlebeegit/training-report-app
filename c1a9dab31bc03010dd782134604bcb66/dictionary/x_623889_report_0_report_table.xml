@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Report Table" max_length="40" name="x_623889_report_0_report_table" sizeclass="13" type="collection">
+        <element default="10.00" label="Amount" max_length="20" name="amount" type="currency"/>
+        <element default="true" label="Amount Display" max_length="40" name="amount_display" type="boolean"/>
+        <element label="Approve Journal" max_length="4000" name="approve_journal" type="journal"/>
+        <element choice="3" default="1" label="Attachment Check State" max_length="40" name="attachment_check_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="未チェック" sequence="10" value="1"/>
+                <element inactive_on_update="false" label="チェック済" sequence="20" value="2"/>
+            </choice>
+        </element>
+        <element label="Comment" max_length="40" name="comment" read_only="true" type="string"/>
+        <element choice="1" label="condition detail" max_length="32" name="condition_detail" reference="x_623889_report_0_report_type" reference_qual="type_valueSTARTSWITHtype^EQ" reference_qual_condition="type_valueSTARTSWITHtype^EQ" type="reference">
+            <choice/>
+        </element>
+        <element choice="1" label="Dropdown List" max_length="32" name="dropdown_list" reference="x_623889_report_0_report_categroy" reference_qual="parent_categroy_id=0^EQ" reference_qual_condition="parent_categroy_id=0^EQ" type="reference">
+            <choice/>
+        </element>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Reporter" max_length="32" name="reporter" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element choice="3" default="0" label="Report Category" max_length="40" name="report_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- 選択してください --" sequence="0" value="0"/>
+            </choice>
+        </element>
+        <element label="Report format" max_length="40" name="report_format" type="string"/>
+        <element label="Report id" max_length="40" name="report_id" type="string"/>
+        <element display="true" label="Report name" max_length="40" name="report_name" type="string"/>
+        <element default="0.0" label="Report size" max_length="20" name="report_size" type="decimal"/>
+        <element choice="3" default="0" label="Report SubCategory" max_length="40" name="report_subcategory" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- 選択してください --" sequence="0" value="0"/>
+            </choice>
+        </element>
+        <element label="Report type" max_length="32" name="report_type" reference="x_623889_report_0_report_type" type="reference"/>
+        <element choice="3" default="0" label="Return to " max_length="40" name="return_to" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="申請者" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="承認者１" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element choice="3" default="not_yet_requested" label="承認状態" max_length="40" name="stage" read_only="true" type="workflow">
+            <choice>
+                <element inactive_on_update="false" label="未申請" sequence="10" value="not_yet_requested"/>
+                <element inactive_on_update="false" label="承認中（承認者１）" sequence="20" value="approving1"/>
+                <element inactive_on_update="false" label="承認中（承認者２）" sequence="30" value="approving2"/>
+                <element inactive_on_update="false" label="承認" sequence="40" value="approved"/>
+                <element inactive_on_update="false" label="否認" sequence="50" value="rejected"/>
+                <element inactive_on_update="false" label="差戻" sequence="60" value="returned"/>
+                <element inactive_on_update="false" label="取消" sequence="70" value="cancelled"/>
+                <element inactive_on_update="false" label="クローズ" sequence="80" value="closed"/>
+            </choice>
+        </element>
+        <element choice="3" default="not_yet_requested" label="申請状態" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="未提出" sequence="10" value="not_yet_requested"/>
+                <element inactive_on_update="false" label="提出済み" sequence="20" value="requested"/>
+                <element inactive="true" inactive_on_update="true" label="Approved" sequence="30" value="approved"/>
+                <element inactive="true" inactive_on_update="true" label="Rejected" sequence="40" value="rejected"/>
+                <element inactive_on_update="false" label="再提出" sequence="50" value="requested_again"/>
+                <element inactive_on_update="false" label="修正中" sequence="60" value="modified"/>
+                <element inactive_on_update="false" label="取消" sequence="70" value="cancelled"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="dropdown_list"/>
+        </index>
+        <index name="index2">
+            <element name="reporter"/>
+        </index>
+        <index name="index3">
+            <element name="report_type"/>
+        </index>
+        <index name="index4">
+            <element name="condition_detail"/>
+        </index>
+    </element>
+</database>

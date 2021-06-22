@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Validation" section_id="25e06d961b603010dd782134604bcb2a" sys_domain="global" table="x_623889_report_0_report_table" version="3" view="Return_object_select_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>report_id</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-07 02:53:40</sys_created_on>
+            <sys_id>e301ed961b603010dd782134604bcb5f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Validation" display_value="Validation" name="x_623889_report_0_report_table" sys_domain="global" view="a9e02d961b603010dd782134604bcbce">25e06d961b603010dd782134604bcb2a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-07 02:53:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-07 02:53:40</sys_created_on>
+            <sys_id>6701ed961b603010dd782134604bcb5f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Validation" display_value="Validation" name="x_623889_report_0_report_table" sys_domain="global" view="a9e02d961b603010dd782134604bcbce">25e06d961b603010dd782134604bcb2a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-07 02:53:40</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>report_name</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-07 02:53:40</sys_created_on>
+            <sys_id>e701ed961b603010dd782134604bcb5f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Validation" display_value="Validation" name="x_623889_report_0_report_table" sys_domain="global" view="a9e02d961b603010dd782134604bcbce">25e06d961b603010dd782134604bcb2a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-07 02:53:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Validation</caption>
+            <header>false</header>
+            <name>x_623889_report_0_report_table</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-07 02:53:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25e06d961b603010dd782134604bcb2a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_623889_report_0_report_table</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+            <sys_update_name>sys_ui_section_25e06d961b603010dd782134604bcb2a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-07 02:53:00</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Return object select view" name="Return_object_select_view">a9e02d961b603010dd782134604bcbce</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

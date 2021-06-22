@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>attachment_check</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>チェック添付ファイル</name>
+        <onclick/>
+        <order>300</order>
+        <script><![CDATA[checkAttachment();
+
+function checkAttachment() {
+    var endNode = '\n';
+    var tabNode = '\t';
+    var splitLine = '#############################################################' + endNode;
+
+    var sysAttachment = new GlideSysAttachment();
+    // 該当レコードの添付ファイルを全部取得する。
+    var currAttachments = sysAttachment.getAttachments('x_623889_report_0_report_table', current.sys_id);
+
+    while (currAttachments.next()) {
+        var attachmentSysId = currAttachments.getValue('sys_id');
+
+        // チェック結果メッセージ	
+        var msg = '';
+
+        // ファイルの種類をチェックする。
+        var contentType = currAttachments.getValue('content_type');
+        if (contentType != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+            msg = 'ファイル「' + currAttachments.getValue('file_name') + '」の種類がExcelではありません。';
+            writeCheckNgResult(current.sys_id, attachmentSysId, msg);
+            continue;
+        }
+
+        // 添付ファイルのデータはExcelファイルとして取得する。
+        var contentStream = sysAttachment.getContentStream(attachmentSysId);
+        var dataParser = new sn_impex.GlideExcelParser();
+        dataParser.setSource(contentStream);
+
+        // Excelファイルのシート名を取得する。
+        var sheetNames = dataParser.getSheetNames();
+        var errStr = '';
+        var tableInfoStr = 'ファイル「' + currAttachments.getValue('file_name') + '」のデータ：' + endNode;
+        for (var sheetIndex = 0; sheetIndex < sheetNames.length; sheetIndex++) {
+            var currentSheetErrorStr = '';
+            dataParser.setSheetName(sheetNames[sheetIndex]);
+            if (dataParser.parse()) {
+                var headers = dataParser.getColumnHeaders();
+
+                var sheetInfoStr = 'シート「' + sheetNames[sheetIndex] + '」' + endNode;
+
+                // ヘッダの内容を出力する。
+                var col = 0;
+                for (col = 0; col < headers.length; col++) {
+                    sheetInfoStr = sheetInfoStr + tabNode + headers[col];
+                }
+                sheetInfoStr = sheetInfoStr + endNode;
+
+                var rowNum = 0;
+                while (dataParser.next()) {
+                    rowNum = rowNum + 1;
+                    var row = dataParser.getRow();
+
+                    // データの内容を出力する。
+                    for (col = 0; col < headers.length; col++) {
+                        sheetInfoStr = sheetInfoStr + tabNode + row[headers[col]];
+                    }
+                    sheetInfoStr = sheetInfoStr + endNode;
+
+                    // 項目の内容をチェックする。
+                    var row_header2 = row[headers[1]];
+                    var row_header3 = row[headers[2]];
+                    if (sheetIndex == 0) {
+                        if (row_header2.length > 13) {
+                            currentSheetErrorStr = currentSheetErrorStr + '　・' + rowNum + '行目の' + headers[1] + 'の桁数は＞13。値: ' + row_header2 + endNode;
+                        }
+
+                        if (row_header3.length > 21) {
+                            currentSheetErrorStr = currentSheetErrorStr + '　・' + rowNum + '行目の' + headers[2] + 'の桁数は＞21。値: ' + row_header3 + endNode;
+                        }
+                    } else if (sheetIndex == 2) {
+                        var pattern1 = /^\d{1,2}$/g;
+                        var checkResult = pattern1.exec(row_header3);
+                        if (checkResult == null || checkResult == '') {
+                            currentSheetErrorStr = currentSheetErrorStr + '　・' + rowNum + '行目の' + headers[2] + 'の型は数字ではありません。値: ' + row_header3 + endNode;
+                        }
+                    }
+                }
+                tableInfoStr = tableInfoStr + sheetInfoStr;
+                if (currentSheetErrorStr != '') {
+                    errStr = errStr + 'シート「' + sheetNames[sheetIndex] + '」' + endNode + currentSheetErrorStr;
+                }
+            } else {
+                gs.addErrorMessage(dataParser.getErrorMessage());
+            }
+        }
+
+        // チェック結果が出力する。
+        if (errStr != '') {
+            // チェックエラーの場合
+            msg = 'ファイル「' + currAttachments.getValue('file_name') + '」に下記エラーが検知されました。' + endNode + errStr + endNode + splitLine + tableInfoStr;
+            writeCheckNgResult(current.sys_id, attachmentSysId, msg);
+        } else {
+            // チェックOKの場合
+            msg = 'ファイル「' + currAttachments.getValue('file_name') + '」がチェックOKです。' + endNode + endNode + splitLine + tableInfoStr;
+            writeCheckOkResult(current.sys_id, attachmentSysId, msg);
+        }
+
+        dataParser.close();
+    }
+
+    // 完了メッセージを出力する。
+    gs.addInfoMessage('チェック完了しました。「添付チェックログ」リンクを利用して、詳細チェック結果を確認してください。');
+
+    // 画面遷移を設定する。
+    action.setRedirectURL(current);
+}
+
+function writeCheckOkResult(reportSysId, attachmentSysId, message) {
+    writeCheckResult(reportSysId, attachmentSysId, 'OK', message);
+}
+
+function writeCheckNgResult(reportSysId, attachmentSysId, message) {
+    writeCheckResult(reportSysId, attachmentSysId, 'NG', message);
+}
+
+function writeCheckResult(reportSysId, attachmentSysId, checkResult, message) {
+    // チェック結果を登録する。
+    var checkResultTable = new GlideRecord('x_623889_report_0_attachment_check_log');
+    checkResultTable.initialize();
+    checkResultTable.report_sys_id = reportSysId;
+    checkResultTable.report_attachment_sys_id = attachmentSysId;
+    checkResultTable.check_result = checkResult;
+    checkResultTable.message = message;
+    checkResultTable.insert();
+
+    // 該当レコードの添付チェック状態を更新する。
+    var reportTable = new GlideRecord('x_623889_report_0_report_table');
+    reportTable.get(reportSysId);
+    reportTable.setValue('attachment_check_state', 2);
+    reportTable.update();
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-25 00:50:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6987020a1b54b410dd782134604bcbc7</sys_id>
+        <sys_mod_count>104</sys_mod_count>
+        <sys_name>チェック添付ファイル</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>sys_ui_action_6987020a1b54b410dd782134604bcbc7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-27 01:20:05</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

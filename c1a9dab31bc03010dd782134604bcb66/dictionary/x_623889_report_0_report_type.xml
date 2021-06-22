@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Report Type" max_length="40" name="x_623889_report_0_report_type" sizeclass="3" type="collection">
+        <element label="Type id" max_length="40" name="type_id" type="string"/>
+        <element display="true" label="Type name" max_length="40" name="type_name" type="string"/>
+        <element label="Type value" max_length="40" name="type_value" type="string"/>
+    </element>
+</database>

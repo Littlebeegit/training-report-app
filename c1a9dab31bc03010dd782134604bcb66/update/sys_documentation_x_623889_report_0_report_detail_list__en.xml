@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="レポート明細リスト" language="en" table="x_623889_report_0_report_detail_list">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>レポート明細リスト</label>
+            <language>en</language>
+            <name>x_623889_report_0_report_detail_list</name>
+            <plural>レポート明細リスト</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-31 05:31:38</sys_created_on>
+            <sys_id>0d120acc1ba03010dd782134604bcba2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>レポート明細リスト</sys_name>
+            <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+            <sys_update_name>sys_documentation_x_623889_report_0_report_detail_list__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-31 05:57:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

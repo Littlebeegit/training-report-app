@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="DELETE">
+        <active>true</active>
+        <activity_stages>{"ends":["8985f4c31b60b010dd782134604bcb12"],"subflows":[],"activities":{},"stages":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition table="x_623889_report_0_report_table">state=not_yet_requested^EQ<item display_value="未提出" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="not_yet_requested"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>8585b4831b60b010dd782134604bcb35,d79530c31b60b010dd782134604bcbe9,a2c530c31b60b010dd782134604bcb56,780738071b60b010dd782134604bcbac,8985f4c31b60b010dd782134604bcb12</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>8585b4831b60b010dd782134604bcb35,d79530c31b60b010dd782134604bcbe9,a2c530c31b60b010dd782134604bcb56,780738071b60b010dd782134604bcbac,8985f4c31b60b010dd782134604bcb12</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Report Main WF</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">8585b4831b60b010dd782134604bcb35</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_id>22e430c31b60b010dd782134604bcb8d</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:58:33</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Report Main WF">4185b4831b60b010dd782134604bcb34</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="DELETE">
+        <access>public</access>
+        <description/>
+        <name>Report Main WF</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4185b4831b60b010dd782134604bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report Main WF</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_update_name>wf_workflow_4185b4831b60b010dd782134604bcb34</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:38:54</sys_updated_on>
+        <table>x_623889_report_0_report_table</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_id>8585b4831b60b010dd782134604bcb35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:38:54</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=8585b4831b60b010dd782134604bcb35"/>
+    <wf_condition action="DELETE">
+        <activity display_value="Begin">8585b4831b60b010dd782134604bcb35</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_id>8185b4831b60b010dd782134604bcb36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:38:54</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Branch">a246173ac0a8016400a47421cd41e42c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Br</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:39:36</sys_created_on>
+        <sys_id>d79530c31b60b010dd782134604bcbe9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:39:41</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+        <x>169</x>
+        <y>165</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=d79530c31b60b010dd782134604bcbe9"/>
+    <wf_condition action="DELETE">
+        <activity display_value="Br">d79530c31b60b010dd782134604bcbe9</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:39:36</sys_created_on>
+        <sys_id>13a530c31b60b010dd782134604bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:39:36</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_id>8985f4c31b60b010dd782134604bcb12</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:39:49</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+        <x>674</x>
+        <y>538</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=8985f4c31b60b010dd782134604bcb12"/>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Parallel Flow Launcher">35ef56111b211100adca1e094f071315</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Subflow1</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>a2c530c31b60b010dd782134604bcb56</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:58:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+        <x>474</x>
+        <y>78</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=a2c530c31b60b010dd782134604bcb56"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>1726bcc31b60b010dd782134604bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// This script can be used to provide the workflows(s) to use for each sub-flow execution.  If a single workflow is&#13;
+// to be used for every sub-flow then simply specify that name or ID here.  Otherwise, if separate workflows may&#13;
+// be needed, then perhaps use a WorkflowCoordinator instance, which can be created or referenced here.  &#13;
+//&#13;
+// -- Use one of the methods below --&#13;
+//&#13;
+// METHOD 1:  Provide a name of a workflow&#13;
+//&#13;
+//      'MyWorkflow'&#13;
+//&#13;
+//&#13;
+// METHOD 2:  Provide a sys_id of a workflow via a variable&#13;
+//&#13;
+//       myWorkflow;&#13;
+//&#13;
+//&#13;
+// METHOD 3:  Create a WorkflowCoordinator with parameters for each flow to launch.  &#13;
+//                     The first two sub-flows will be the AllocateServer workflow and the last will be the SetupLoadBalancer workflow&#13;
+//&#13;
+//&#13;
+//        coordinator = new WorkflowCoordinator( {workflow:'AllocateServer'} );&#13;
+//        coordinator.add( {u_serverName:'Tomcat1'} );&#13;
+//        coordinator.add( {u_serverName:'Tomcat2'} );&#13;
+//        coordinator.add( {u_portlist: ['8080','8081,'8082'] },  'SetupLoadBalancer' );&#13;
+//&#13;
+//        coordinator;         // THIS MUST BE THE LAST LINE&#13;
+//&#13;
+//&#13;
+// METHOD 4:  Have a script include return a workflow name or ID or have it return a WorkflowCoordinator instance.&#13;
+//&#13;
+//         var siteType = 'BackupSite';&#13;
+//         var numTomcats = 4;&#13;
+//&#13;
+//         SiteBuilder.build(siteType, numTomcats);     // LAST LINE!  This function returns a pre-configured WorkflowCoordinator&#13;
+//                          &#13;
+&#13;
+</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>1b2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>532630c31b60b010dd782134604bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>5326bcc31b60b010dd782134604bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>572630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>800fa3fe1b6c7010dd782134604bcb43</value>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>932630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f2630c31b60b010dd782134604bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>25</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f26bcc31b60b010dd782134604bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>db2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>5</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>db26bcc31b60b010dd782134604bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>1b2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f2630c31b60b010dd782134604bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>572630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>800fa3fe1b6c7010dd782134604bcb43</value>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>1726bcc31b60b010dd782134604bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// This script can be used to provide the workflows(s) to use for each sub-flow execution.  If a single workflow is&#13;
+// to be used for every sub-flow then simply specify that name or ID here.  Otherwise, if separate workflows may&#13;
+// be needed, then perhaps use a WorkflowCoordinator instance, which can be created or referenced here.  &#13;
+//&#13;
+// -- Use one of the methods below --&#13;
+//&#13;
+// METHOD 1:  Provide a name of a workflow&#13;
+//&#13;
+//      'MyWorkflow'&#13;
+//&#13;
+//&#13;
+// METHOD 2:  Provide a sys_id of a workflow via a variable&#13;
+//&#13;
+//       myWorkflow;&#13;
+//&#13;
+//&#13;
+// METHOD 3:  Create a WorkflowCoordinator with parameters for each flow to launch.  &#13;
+//                     The first two sub-flows will be the AllocateServer workflow and the last will be the SetupLoadBalancer workflow&#13;
+//&#13;
+//&#13;
+//        coordinator = new WorkflowCoordinator( {workflow:'AllocateServer'} );&#13;
+//        coordinator.add( {u_serverName:'Tomcat1'} );&#13;
+//        coordinator.add( {u_serverName:'Tomcat2'} );&#13;
+//        coordinator.add( {u_portlist: ['8080','8081,'8082'] },  'SetupLoadBalancer' );&#13;
+//&#13;
+//        coordinator;         // THIS MUST BE THE LAST LINE&#13;
+//&#13;
+//&#13;
+// METHOD 4:  Have a script include return a workflow name or ID or have it return a WorkflowCoordinator instance.&#13;
+//&#13;
+//         var siteType = 'BackupSite';&#13;
+//         var numTomcats = 4;&#13;
+//&#13;
+//         SiteBuilder.build(siteType, numTomcats);     // LAST LINE!  This function returns a pre-configured WorkflowCoordinator&#13;
+//                          &#13;
+&#13;
+</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>db26bcc31b60b010dd782134604bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>25</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>db2630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>5</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>532630c31b60b010dd782134604bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f26bcc31b60b010dd782134604bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>5326bcc31b60b010dd782134604bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>a2c530c31b60b010dd782134604bcb56</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>932630c31b60b010dd782134604bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Subflow1">a2c530c31b60b010dd782134604bcb56</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:41:47</sys_created_on>
+        <sys_id>9f26bcc31b60b010dd782134604bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:41:47</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="DELETE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for cancelled</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>780738071b60b010dd782134604bcbac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:53</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+        <x>366</x>
+        <y>399</y>
+    </wf_activity>
+    <sys_variable_value action="DELETE" query="document_key=780738071b60b010dd782134604bcbac"/>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>780738071b60b010dd782134604bcbac</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>b217f4071b60b010dd782134604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:51</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>780738071b60b010dd782134604bcbac</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>b617f4071b60b010dd782134604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:51</sys_updated_on>
+        <value>state=cancelled^EQ</value>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>780738071b60b010dd782134604bcbac</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>b617f4071b60b010dd782134604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:51</sys_updated_on>
+        <value>state=cancelled^EQ</value>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>wf_activity</document>
+        <document_key>780738071b60b010dd782134604bcbac</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>b217f4071b60b010dd782134604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:51</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="DELETE">
+        <activity display_value="Wait for cancelled">780738071b60b010dd782134604bcbac</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:51</sys_created_on>
+        <sys_id>be17f4071b60b010dd782134604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:51</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">9f26bcc31b60b010dd782134604bcbfe</condition>
+        <from display_value="Subflow1">a2c530c31b60b010dd782134604bcb56</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:42:49</sys_created_on>
+        <sys_id>1266fcc31b60b010dd782134604bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:42:49</sys_updated_on>
+        <to display_value="End">8985f4c31b60b010dd782134604bcb12</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">13a530c31b60b010dd782134604bcb97</condition>
+        <from display_value="Br">d79530c31b60b010dd782134604bcbe9</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:42:52</sys_created_on>
+        <sys_id>8766f4c31b60b010dd782134604bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:42:52</sys_updated_on>
+        <to display_value="Subflow1">a2c530c31b60b010dd782134604bcb56</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">8185b4831b60b010dd782134604bcb36</condition>
+        <from display_value="Begin">8585b4831b60b010dd782134604bcb35</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:39:44</sys_created_on>
+        <sys_id>99b57c831b60b010dd782134604bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:39:44</sys_updated_on>
+        <to display_value="Br">d79530c31b60b010dd782134604bcbe9</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">be17f4071b60b010dd782134604bcb60</condition>
+        <from display_value="Wait for cancelled">780738071b60b010dd782134604bcbac</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:46:08</sys_created_on>
+        <sys_id>f62738071b60b010dd782134604bcb40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:46:08</sys_updated_on>
+        <to display_value="End">8985f4c31b60b010dd782134604bcb12</to>
+    </wf_transition>
+    <wf_transition action="DELETE">
+        <condition display_value="Always">13a530c31b60b010dd782134604bcb97</condition>
+        <from display_value="Br">d79530c31b60b010dd782134604bcbe9</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:45:59</sys_created_on>
+        <sys_id>fc277cc31b60b010dd782134604bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:45:59</sys_updated_on>
+        <to display_value="Wait for cancelled">780738071b60b010dd782134604bcbac</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="DELETE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:38:54</sys_created_on>
+        <sys_id>8d85b4831b60b010dd782134604bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:38:54</sys_updated_on>
+        <workflow_version display_value="Report Main WF">22e430c31b60b010dd782134604bcb8d</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="DELETE" query="workflow=4185b4831b60b010dd782134604bcb34^sys_id!=22e430c31b60b010dd782134604bcb8d">
+        <published>false</published>
+    </wf_workflow_version>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Report App">c1a9dab31bc03010dd782134604bcb66</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>wf_workflow_4185b4831b60b010dd782134604bcb34</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="wf_workflow_version"&gt;&lt;wf_workflow_version action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;activity_stages&gt;{"ends":["8985f4c31b60b010dd782134604bcb12"],"subflows":[],"activities":{},"stages":{}}&lt;/activity_stages&gt;&lt;after_business_rules&gt;false&lt;/after_business_rules&gt;&lt;checked_out/&gt;&lt;checked_out_by/&gt;&lt;column_renderer display_value="Workflow-driven"&gt;a56213111b030100adca1e094f0713ac&lt;/column_renderer&gt;&lt;condition table="x_623889_report_0_report_table"&gt;state=not_yet_requested^EQ&lt;item display_value="未提出" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="not_yet_requested"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;condition_type&gt;run_match&lt;/condition_type&gt;&lt;description/&gt;&lt;expected_sequences&gt;8585b4831b60b010dd782134604bcb35,d79530c31b60b010dd782134604bcbe9,a2c530c31b60b010dd782134604bcb56,780738071b60b010dd782134604bcbac,8985f4c31b60b010dd782134604bcb12&lt;/expected_sequences&gt;&lt;expected_time&gt;1970-01-01 14:00:00&lt;/expected_time&gt;&lt;expected_time_type/&gt;&lt;full_sequences&gt;8585b4831b60b010dd782134604bcb35,d79530c31b60b010dd782134604bcbe9,a2c530c31b60b010dd782134604bcb56,780738071b60b010dd782134604bcbac,8985f4c31b60b010dd782134604bcb12&lt;/full_sequences&gt;&lt;journal/&gt;&lt;max_activity_count&gt;100&lt;/max_activity_count&gt;&lt;name&gt;Report Main WF&lt;/name&gt;&lt;not_cacheable&gt;false&lt;/not_cacheable&gt;&lt;on_cancel&gt;&lt;![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]&gt;&lt;/on_cancel&gt;&lt;order&gt;100&lt;/order&gt;&lt;pin_type&gt;set_by_activity&lt;/pin_type&gt;&lt;published&gt;true&lt;/published&gt;&lt;relative_duration/&gt;&lt;requires_ert&gt;true&lt;/requires_ert&gt;&lt;run_multiple&gt;false&lt;/run_multiple&gt;&lt;schedule/&gt;&lt;stage_field&gt;stage&lt;/stage_field&gt;&lt;stage_order&gt;computed&lt;/stage_order&gt;&lt;start display_value="Begin"&gt;8585b4831b60b010dd782134604bcb35&lt;/start&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_id&gt;22e430c31b60b010dd782134604bcb8d&lt;/sys_id&gt;&lt;sys_mod_count&gt;44&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:58:33&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_table&lt;/table&gt;&lt;timezone/&gt;&lt;validated&gt;false&lt;/validated&gt;&lt;workflow display_value="Report Main WF"&gt;4185b4831b60b010dd782134604bcb34&lt;/workflow&gt;&lt;/wf_workflow_version&gt;&lt;wf_workflow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;description/&gt;&lt;name&gt;Report Main WF&lt;/name&gt;&lt;preview/&gt;&lt;sys_class_name&gt;wf_workflow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;4185b4831b60b010dd782134604bcb34&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Report Main WF&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Report App" source="x_623889_report_0"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Report App"&gt;c1a9dab31bc03010dd782134604bcb66&lt;/sys_scope&gt;&lt;sys_update_name&gt;wf_workflow_4185b4831b60b010dd782134604bcb34&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:38:54&lt;/sys_updated_on&gt;&lt;table&gt;x_623889_report_0_report_table&lt;/table&gt;&lt;template&gt;false&lt;/template&gt;&lt;vars/&gt;&lt;/wf_workflow&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Begin"&gt;c7a5e32c0a0a0b3a002377c24ed8ea76&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;1&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input/&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Begin&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_id&gt;8585b4831b60b010dd782134604bcb35&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:38:54&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width&gt;80&lt;/width&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;x&gt;20&lt;/x&gt;&lt;y&gt;20&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8585b4831b60b010dd782134604bcb35"/&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Begin"&gt;8585b4831b60b010dd782134604bcb35&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_id&gt;8185b4831b60b010dd782134604bcb36&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:38:54&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Branch"&gt;a246173ac0a8016400a47421cd41e42c&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;3&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Br&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:39:36&lt;/sys_created_on&gt;&lt;sys_id&gt;d79530c31b60b010dd782134604bcbe9&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:39:41&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;x&gt;169&lt;/x&gt;&lt;y&gt;165&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d79530c31b60b010dd782134604bcbe9"/&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Br"&gt;d79530c31b60b010dd782134604bcbe9&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:39:36&lt;/sys_created_on&gt;&lt;sys_id&gt;13a530c31b60b010dd782134604bcb97&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:39:36&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="End"&gt;c7a66f7d0a0a0b3a004544a6d2f14076&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;2&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input/&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;End&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_id&gt;8985f4c31b60b010dd782134604bcb12&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:39:49&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width&gt;80&lt;/width&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;x&gt;674&lt;/x&gt;&lt;y&gt;538&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8985f4c31b60b010dd782134604bcb12"/&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Parallel Flow Launcher"&gt;35ef56111b211100adca1e094f071315&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;4&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Subflow1&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;a2c530c31b60b010dd782134604bcb56&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:58:28&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;x&gt;474&lt;/x&gt;&lt;y&gt;78&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a2c530c31b60b010dd782134604bcb56"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;310&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;1726bcc31b60b010dd782134604bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// This script can be used to provide the workflows(s) to use for each sub-flow execution.  If a single workflow is&amp;#13;
+// to be used for every sub-flow then simply specify that name or ID here.  Otherwise, if separate workflows may&amp;#13;
+// be needed, then perhaps use a WorkflowCoordinator instance, which can be created or referenced here.  &amp;#13;
+//&amp;#13;
+// -- Use one of the methods below --&amp;#13;
+//&amp;#13;
+// METHOD 1:  Provide a name of a workflow&amp;#13;
+//&amp;#13;
+//      'MyWorkflow'&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 2:  Provide a sys_id of a workflow via a variable&amp;#13;
+//&amp;#13;
+//       myWorkflow;&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 3:  Create a WorkflowCoordinator with parameters for each flow to launch.  &amp;#13;
+//                     The first two sub-flows will be the AllocateServer workflow and the last will be the SetupLoadBalancer workflow&amp;#13;
+//&amp;#13;
+//&amp;#13;
+//        coordinator = new WorkflowCoordinator( {workflow:'AllocateServer'} );&amp;#13;
+//        coordinator.add( {u_serverName:'Tomcat1'} );&amp;#13;
+//        coordinator.add( {u_serverName:'Tomcat2'} );&amp;#13;
+//        coordinator.add( {u_portlist: ['8080','8081,'8082'] },  'SetupLoadBalancer' );&amp;#13;
+//&amp;#13;
+//        coordinator;         // THIS MUST BE THE LAST LINE&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 4:  Have a script include return a workflow name or ID or have it return a WorkflowCoordinator instance.&amp;#13;
+//&amp;#13;
+//         var siteType = 'BackupSite';&amp;#13;
+//         var numTomcats = 4;&amp;#13;
+//&amp;#13;
+//         SiteBuilder.build(siteType, numTomcats);     // LAST LINE!  This function returns a pre-configured WorkflowCoordinator&amp;#13;
+//                          &amp;#13;
+&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Workflow"&gt;22dea7431b211100adca1e094f0713f2&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;1b2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Inputs"&gt;713142e11b211100adca1e094f0713f0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;600&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;532630c31b60b010dd782134604bcb2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Process flow complete"&gt;0a2b9e591b221100adca1e094f07130e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;800&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;5326bcc31b60b010dd782134604bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Process finished"&gt;662e36101b221100adca1e094f0713a0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;300&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;572630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;800fa3fe1b6c7010dd782134604bcb43&lt;/value&gt;&lt;variable display_value="Workflow"&gt;d698838a1b121100adca1e094f071315&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;932630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// To access the set of completed workflows use the 'coordinator' variable.&amp;#13;
+//&amp;#13;
+//  var flow1Result = coordinator.getFlow(1).output;&amp;#13;
+//&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Finished script"&gt;e47e76101b221100adca1e094f07134e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f2630c31b60b010dd782134604bcb2a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Advanced"&gt;7608dbca1b121100adca1e094f071355&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;400&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;25&lt;/value&gt;&lt;variable display_value="Max flows"&gt;e44186731b211100adca1e094f0713e0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;700&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f26bcc31b60b010dd782134604bcbfd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// To access the flow that completed, use the 'flow' variable.&amp;#13;
+//  &amp;#13;
+//     var flowOutput = flow.output;&amp;#13;
+//&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Flow complete"&gt;006b9e591b221100adca1e094f0713a1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;500&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;db2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;5&lt;/value&gt;&lt;variable display_value="Max simultaneous"&gt;7b81c6731b211100adca1e094f07136e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;350&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;db26bcc31b60b010dd782134604bcbfd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Count"&gt;428bf90eff1331009267ffffffffff80&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;1b2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Inputs"&gt;713142e11b211100adca1e094f0713f0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f2630c31b60b010dd782134604bcb2a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Advanced"&gt;7608dbca1b121100adca1e094f071355&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;300&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;572630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;800fa3fe1b6c7010dd782134604bcb43&lt;/value&gt;&lt;variable display_value="Workflow"&gt;d698838a1b121100adca1e094f071315&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;310&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;1726bcc31b60b010dd782134604bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// This script can be used to provide the workflows(s) to use for each sub-flow execution.  If a single workflow is&amp;#13;
+// to be used for every sub-flow then simply specify that name or ID here.  Otherwise, if separate workflows may&amp;#13;
+// be needed, then perhaps use a WorkflowCoordinator instance, which can be created or referenced here.  &amp;#13;
+//&amp;#13;
+// -- Use one of the methods below --&amp;#13;
+//&amp;#13;
+// METHOD 1:  Provide a name of a workflow&amp;#13;
+//&amp;#13;
+//      'MyWorkflow'&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 2:  Provide a sys_id of a workflow via a variable&amp;#13;
+//&amp;#13;
+//       myWorkflow;&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 3:  Create a WorkflowCoordinator with parameters for each flow to launch.  &amp;#13;
+//                     The first two sub-flows will be the AllocateServer workflow and the last will be the SetupLoadBalancer workflow&amp;#13;
+//&amp;#13;
+//&amp;#13;
+//        coordinator = new WorkflowCoordinator( {workflow:'AllocateServer'} );&amp;#13;
+//        coordinator.add( {u_serverName:'Tomcat1'} );&amp;#13;
+//        coordinator.add( {u_serverName:'Tomcat2'} );&amp;#13;
+//        coordinator.add( {u_portlist: ['8080','8081,'8082'] },  'SetupLoadBalancer' );&amp;#13;
+//&amp;#13;
+//        coordinator;         // THIS MUST BE THE LAST LINE&amp;#13;
+//&amp;#13;
+//&amp;#13;
+// METHOD 4:  Have a script include return a workflow name or ID or have it return a WorkflowCoordinator instance.&amp;#13;
+//&amp;#13;
+//         var siteType = 'BackupSite';&amp;#13;
+//         var numTomcats = 4;&amp;#13;
+//&amp;#13;
+//         SiteBuilder.build(siteType, numTomcats);     // LAST LINE!  This function returns a pre-configured WorkflowCoordinator&amp;#13;
+//                          &amp;#13;
+&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Workflow"&gt;22dea7431b211100adca1e094f0713f2&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;350&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;db26bcc31b60b010dd782134604bcbfd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Count"&gt;428bf90eff1331009267ffffffffff80&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;400&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;25&lt;/value&gt;&lt;variable display_value="Max flows"&gt;e44186731b211100adca1e094f0713e0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;500&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;db2630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;5&lt;/value&gt;&lt;variable display_value="Max simultaneous"&gt;7b81c6731b211100adca1e094f07136e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;600&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;532630c31b60b010dd782134604bcb2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Process flow complete"&gt;0a2b9e591b221100adca1e094f07130e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;700&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f26bcc31b60b010dd782134604bcbfd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// To access the flow that completed, use the 'flow' variable.&amp;#13;
+//  &amp;#13;
+//     var flowOutput = flow.output;&amp;#13;
+//&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Flow complete"&gt;006b9e591b221100adca1e094f0713a1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;800&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;5326bcc31b60b010dd782134604bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Process finished"&gt;662e36101b221100adca1e094f0713a0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;a2c530c31b60b010dd782134604bcb56&lt;/document_key&gt;&lt;order&gt;900&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;932630c31b60b010dd782134604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;value&gt;// To access the set of completed workflows use the 'coordinator' variable.&amp;#13;
+//&amp;#13;
+//  var flow1Result = coordinator.getFlow(1).output;&amp;#13;
+//&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Finished script"&gt;e47e76101b221100adca1e094f07134e&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Subflow1"&gt;a2c530c31b60b010dd782134604bcb56&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:41:47&lt;/sys_created_on&gt;&lt;sys_id&gt;9f26bcc31b60b010dd782134604bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:41:47&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_activity action="INSERT_OR_UPDATE"&gt;&lt;activity_definition display_value="Wait for condition"&gt;d93a02ae0a0a0aa30077abad3fdac035&lt;/activity_definition&gt;&lt;activity_definition_updated&gt;false&lt;/activity_definition_updated&gt;&lt;databus_lookup_id&gt;5&lt;/databus_lookup_id&gt;&lt;height/&gt;&lt;input&gt;{}&lt;/input&gt;&lt;is_parent&gt;false&lt;/is_parent&gt;&lt;name&gt;Wait for cancelled&lt;/name&gt;&lt;new_activity_definition/&gt;&lt;notes/&gt;&lt;out_of_date&gt;false&lt;/out_of_date&gt;&lt;parent/&gt;&lt;pinned&gt;false&lt;/pinned&gt;&lt;pinned_version/&gt;&lt;stage/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;780738071b60b010dd782134604bcbac&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:53&lt;/sys_updated_on&gt;&lt;timeout&gt;1970-01-01 00:00:00&lt;/timeout&gt;&lt;vars/&gt;&lt;width/&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;x&gt;366&lt;/x&gt;&lt;y&gt;399&lt;/y&gt;&lt;/wf_activity&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=780738071b60b010dd782134604bcbac"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;780738071b60b010dd782134604bcbac&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;b217f4071b60b010dd782134604bcb60&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:51&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&amp;#13;
+answer = true;&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Condition script"&gt;c35debce0a0a0ba96248a709440cf31a&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;780738071b60b010dd782134604bcbac&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;b617f4071b60b010dd782134604bcb60&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:51&lt;/sys_updated_on&gt;&lt;value&gt;state=cancelled^EQ&lt;/value&gt;&lt;variable display_value="Condition"&gt;c35dc4cd0a0a0ba96248a70990c1ac54&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;780738071b60b010dd782134604bcbac&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;b617f4071b60b010dd782134604bcb60&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:51&lt;/sys_updated_on&gt;&lt;value&gt;state=cancelled^EQ&lt;/value&gt;&lt;variable display_value="Condition"&gt;c35dc4cd0a0a0ba96248a70990c1ac54&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;wf_activity&lt;/document&gt;&lt;document_key&gt;780738071b60b010dd782134604bcbac&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;b217f4071b60b010dd782134604bcb60&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:51&lt;/sys_updated_on&gt;&lt;value&gt;// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&amp;#13;
+answer = true;&amp;#13;
+&lt;/value&gt;&lt;variable display_value="Condition script"&gt;c35debce0a0a0ba96248a709440cf31a&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;wf_condition action="INSERT_OR_UPDATE"&gt;&lt;activity display_value="Wait for cancelled"&gt;780738071b60b010dd782134604bcbac&lt;/activity&gt;&lt;condition&gt;true&lt;/condition&gt;&lt;condition_default/&gt;&lt;condition_type&gt;standard&lt;/condition_type&gt;&lt;else_flag&gt;false&lt;/else_flag&gt;&lt;error&gt;false&lt;/error&gt;&lt;event&gt;false&lt;/event&gt;&lt;event_name/&gt;&lt;is_positive&gt;true&lt;/is_positive&gt;&lt;name&gt;Always&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;short_description/&gt;&lt;skip_during_generate&gt;false&lt;/skip_during_generate&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:51&lt;/sys_created_on&gt;&lt;sys_id&gt;be17f4071b60b010dd782134604bcb60&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:51&lt;/sys_updated_on&gt;&lt;/wf_condition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;9f26bcc31b60b010dd782134604bcbfe&lt;/condition&gt;&lt;from display_value="Subflow1"&gt;a2c530c31b60b010dd782134604bcb56&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:42:49&lt;/sys_created_on&gt;&lt;sys_id&gt;1266fcc31b60b010dd782134604bcbfb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:42:49&lt;/sys_updated_on&gt;&lt;to display_value="End"&gt;8985f4c31b60b010dd782134604bcb12&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;13a530c31b60b010dd782134604bcb97&lt;/condition&gt;&lt;from display_value="Br"&gt;d79530c31b60b010dd782134604bcbe9&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:42:52&lt;/sys_created_on&gt;&lt;sys_id&gt;8766f4c31b60b010dd782134604bcb4c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:42:52&lt;/sys_updated_on&gt;&lt;to display_value="Subflow1"&gt;a2c530c31b60b010dd782134604bcb56&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;8185b4831b60b010dd782134604bcb36&lt;/condition&gt;&lt;from display_value="Begin"&gt;8585b4831b60b010dd782134604bcb35&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:39:44&lt;/sys_created_on&gt;&lt;sys_id&gt;99b57c831b60b010dd782134604bcbb1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:39:44&lt;/sys_updated_on&gt;&lt;to display_value="Br"&gt;d79530c31b60b010dd782134604bcbe9&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;be17f4071b60b010dd782134604bcb60&lt;/condition&gt;&lt;from display_value="Wait for cancelled"&gt;780738071b60b010dd782134604bcbac&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:46:08&lt;/sys_created_on&gt;&lt;sys_id&gt;f62738071b60b010dd782134604bcb40&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:46:08&lt;/sys_updated_on&gt;&lt;to display_value="End"&gt;8985f4c31b60b010dd782134604bcb12&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_transition action="INSERT_OR_UPDATE"&gt;&lt;condition display_value="Always"&gt;13a530c31b60b010dd782134604bcb97&lt;/condition&gt;&lt;from display_value="Br"&gt;d79530c31b60b010dd782134604bcbe9&lt;/from&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:45:59&lt;/sys_created_on&gt;&lt;sys_id&gt;fc277cc31b60b010dd782134604bcb4d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:45:59&lt;/sys_updated_on&gt;&lt;to display_value="Wait for cancelled"&gt;780738071b60b010dd782134604bcbac&lt;/to&gt;&lt;/wf_transition&gt;&lt;wf_estimated_runtime_config action="INSERT_OR_UPDATE"&gt;&lt;estimated_run_time/&gt;&lt;no_of_data_points&gt;1&lt;/no_of_data_points&gt;&lt;percentage_threshold_ert&gt;20&lt;/percentage_threshold_ert&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-09 07:38:54&lt;/sys_created_on&gt;&lt;sys_id&gt;8d85b4831b60b010dd782134604bcb33&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-09 07:38:54&lt;/sys_updated_on&gt;&lt;workflow_version display_value="Report Main WF"&gt;22e430c31b60b010dd782134604bcb8d&lt;/workflow_version&gt;&lt;/wf_estimated_runtime_config&gt;&lt;wf_workflow_version action="update_multiple" query="workflow=4185b4831b60b010dd782134604bcb34^sys_id!=22e430c31b60b010dd782134604bcb8d"&gt;&lt;published&gt;false&lt;/published&gt;&lt;/wf_workflow_version&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1699606720</payload_hash>
+        <record_name>Report Main WF</record_name>
+        <reverted_from/>
+        <source>8da9dab31bc03010dd782134604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 07:58:33</sys_created_on>
+        <sys_id>850af8c71b60b010dd782134604bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179efc7b7ab0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 07:58:33</sys_updated_on>
+        <type>Workflow</type>
+        <update_guid>010af8c71560b0104e15b418b0b9296e</update_guid>
+        <update_guid_history>010af8c71560b0104e15b418b0b9296e:1699606720</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Report Main WF">ef7bbc0b1b60b010dd782134604bcb57</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 08:05:00</sys_created_on>
+        <sys_db_object display_value="" name="wf_workflow">wf_workflow</sys_db_object>
+        <sys_id>47cc283ec330478ea0ac05a2b6eb8d01</sys_id>
+        <sys_metadata>4185b4831b60b010dd782134604bcb34</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report Main WF</sys_name>
+        <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
+        <sys_scope_delete display_value="">a11583cc1baf45728149c5e445a46cc4</sys_scope_delete>
+        <sys_update_name>wf_workflow_4185b4831b60b010dd782134604bcb34</sys_update_name>
+        <sys_update_version display_value="wf_workflow_4185b4831b60b010dd782134604bcb34">850af8c71b60b010dd782134604bcb6e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 08:05:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
