@@ -10,23 +10,23 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">b3d7614c1b603010dd782134604bcb4b</sp_column>
-        <sp_widget display_value="Approvals">f37aa302cb70020000f8d856634c9cfc</sp_widget>
+        <sp_column display_value="1">c4d31dfb1bbc7010dd782134604bcb67</sp_column>
+        <sp_widget/>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-05-31 03:37:15</sys_created_on>
-        <sys_id>69e7ad0c1b603010dd782134604bcb31</sys_id>
+        <sys_created_on>2021-06-24 04:02:29</sys_created_on>
+        <sys_id>55d3153f1bbc7010dd782134604bcb07</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
         <sys_policy/>
         <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
-        <sys_update_name>sp_instance_69e7ad0c1b603010dd782134604bcb31</sys_update_name>
+        <sys_update_name>sp_instance_55d3153f1bbc7010dd782134604bcb07</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-31 03:37:15</sys_updated_on>
+        <sys_updated_on>2021-06-24 04:02:29</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=69e7ad0c1b603010dd782134604bcb31"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=55d3153f1bbc7010dd782134604bcb07"/>
 </record_update>

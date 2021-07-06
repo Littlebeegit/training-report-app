@@ -31,12 +31,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-18 06:22:33</sys_created_on>
         <sys_id>e25ab6351b30b010dd782134604bcb26</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-18 07:35:49</sys_updated_on>
+        <sys_updated_on>2021-06-24 05:32:18</sys_updated_on>
         <table>x_623889_report_0_report_table</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Report WF">800fa3fe1b6c7010dd782134604bcb43</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">

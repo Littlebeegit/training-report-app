@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
     <sp_column action="INSERT_OR_UPDATE">
         <class_name/>
-        <order>2</order>
-        <size>6</size>
+        <order>1</order>
+        <size/>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="1">33d7e9881b603010dd782134604bcbae</sp_row>
+        <sp_row display_value="1">2f34adf71bfc7010dd782134604bcb0f</sp_row>
         <sys_class_name>sp_column</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-05-31 03:37:08</sys_created_on>
-        <sys_id>7bd7614c1b603010dd782134604bcb4d</sys_id>
+        <sys_created_on>2021-06-24 05:14:11</sys_created_on>
+        <sys_id>a334adf71bfc7010dd782134604bcb12</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>2</sys_name>
+        <sys_name>1</sys_name>
         <sys_package display_value="Report App" source="x_623889_report_0">c1a9dab31bc03010dd782134604bcb66</sys_package>
         <sys_policy/>
         <sys_scope display_value="Report App">c1a9dab31bc03010dd782134604bcb66</sys_scope>
-        <sys_update_name>sp_column_7bd7614c1b603010dd782134604bcb4d</sys_update_name>
+        <sys_update_name>sp_column_a334adf71bfc7010dd782134604bcb12</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-31 03:37:08</sys_updated_on>
+        <sys_updated_on>2021-06-24 05:14:11</sys_updated_on>
     </sp_column>
 </record_update>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Report Table" max_length="40" name="x_623889_report_0_report_table" sizeclass="13" type="collection">
+    <element audit="true" label="Report Table" max_length="40" name="x_623889_report_0_report_table" sizeclass="15" type="collection">
         <element default="10.00" label="Amount" max_length="20" name="amount" type="currency"/>
         <element default="true" label="Amount Display" max_length="40" name="amount_display" type="boolean"/>
         <element label="Approve Journal" max_length="4000" name="approve_journal" type="journal"/>
@@ -16,6 +16,7 @@
         <element choice="1" label="Dropdown List" max_length="32" name="dropdown_list" reference="x_623889_report_0_report_categroy" reference_qual="parent_categroy_id=0^EQ" reference_qual_condition="parent_categroy_id=0^EQ" type="reference">
             <choice/>
         </element>
+        <element attributes="target_field=percent_complete_target,target_threshold_colors=0:red;33:orange;66:green;90:darkblue,target_field=target" default="0" label="% パーセント" max_length="15" name="percent_col" type="percent_complete"/>
         <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Reporter" max_length="32" name="reporter" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <element choice="3" default="0" label="Report Category" max_length="40" name="report_category" type="choice">
             <choice>
@@ -61,6 +62,7 @@
                 <element inactive_on_update="false" label="取消" sequence="70" value="cancelled"/>
             </choice>
         </element>
+        <element label="Target" max_length="20" name="target" type="decimal"/>
         <index name="index">
             <element name="dropdown_list"/>
         </index>
